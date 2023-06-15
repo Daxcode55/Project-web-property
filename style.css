@@ -175,9 +175,11 @@ header {
 /* FLEX CONTENT ITEM */
 
 .container-flex-content {
-    border: 1px solid red;
     display: flex;
+    margin: 30px 40px;
+    border-radius: 12px;
     justify-content: space-between;
+    background-color: var(--card-color);
 }
 
 
@@ -187,12 +189,11 @@ header {
     display: flex;
     flex-direction: column;
     position: relative;
-    box-shadow: 0 1px 6px 0 rgba(49, 53, 59, 0.12);
     border-radius: 12px;
 }
 
 .container-flex-kategori .title-kategori {
-    padding: 10px;
+    padding: 10px 10px 10px 2px;
     font-size: 27px;
     font-weight: bolder;
 }
@@ -200,7 +201,11 @@ header {
 .container-flex-kategori .wraper-card-kategori {
     display: flex;
     overflow-x: scroll;
+    height: 200px;
+    margin-top: 10px;
     scroll-behavior: smooth;
+    border: 1px solid var(--light-black);
+    border-radius: 12px;
     transition: all 3s;
 }
 
@@ -217,6 +222,7 @@ header {
 .wraper-card-kategori .img-kategori {
     width: 130px;
     height: 130px;
+    border: 1px solid var(--light-black);
     border-radius: 12px;
 }
 
@@ -294,21 +300,25 @@ header {
 
 
 .container-form-kategori {
-    border: 1px solid var(--card-color);
     width: 45%;
     margin: 20px 30px 20px 0;
 }
 
+.wraper-form-kategori {
+    border: 1px solid var(--light-black);
+    border-radius: 12px;
+    height: 180px;
+    margin-top: 10px;
+}
+
 .container-form-kategori .title-form {
-    padding: 10px;
+    padding: 10px 10px 10px 2px;
     font-size: 27px;
     font-weight: bolder;
 }
 
 .container-form-kategori .tabs {
-    border: 1px solid var(--color-bg);
-    border-top-left-radius: 12px;
-    border-top-right-radius: 12px;
+    border-bottom: 1px solid var(--black);
     display: flex;
     max-width: 100%;
     position: relative;
@@ -322,11 +332,15 @@ header {
     background-color: inherit;
     font-size: 15px;
     font-weight: 900;
-    color: #20252d;
+    color: var(--black);
 }
 
 .container-form-kategori .tabcontent {
     display: none;
+}
+
+.tabs button.active {
+    color: var(--main-color);
 }
 
 .tabs .tab1.active ~ .line {
@@ -334,21 +348,20 @@ header {
 }
 
 .tabs .tab2.active ~ .line {
-    margin-left: 153px;
+    margin-left: 160px;
 }
 
 .tabs .tab3.active ~ .line{
-    margin-left: 305px;
-
+    margin-left: 320px;
 }
 
 .tabs .tab4.active ~ .line{
-    margin-left: 457px;
+    margin-left: 480px;
 }
 
 
 .line {
-    width: 153px;
+    width: 160px;
     height: 2px;
     background-color: var(--main-color);
     position: absolute;
