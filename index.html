@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- link cdn font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- link custom css -->
+    <link rel="stylesheet" href="style.css">
+
+    <title>MYProperty</title>
+</head>
+
+<body>
+
+    <header>
+        <div class="flex">
+            <a href="#" class="logo">MY<span>Property</span></a>
+            <nav class="navbar">
+                <a href="#" class="link">Beranda</a>
+                <a href="#" class="link">Tentang Kami</a>
+                <a href="#" class="link">Mulai Berjualan</a>
+                <a href="#" class="link">Shop</a>
+            </nav>
+            <div id="menu-btn" class="fas fa-bars"></div>
+        </div>
+
+        <div class="header-jumbotron">
+            <p class="intro">Tempat Penjualan <span>Rumah</span> dan <span>Aset</span> Anda</p>
+            <div class="wraper-item-search">
+                <input type="text" placeholder="Cari Tipe Rumah impian Anda" maxlength="50" required
+                    class="input-search">
+                <div id="search-btn" class="fas fa-magnifying-glass"></div>
+            </div>
+            <div class="wraper-btn">
+                <button class="btn-masuk">Masuk</button>
+                <button class="btn-daftar">Daftar</button>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- content item card -->
+    <div class="container-flex-content">
+
+        <div class="container-flex-kategori">
+            <p class="title-kategori">Pilihan Terbaik</p>
+            <div class="wraper-card-kategori" id="wraper-card-kategori">
+
+                <div class="card-kategori">
+                    <img src="asset/sourceGambar/home.jpg" alt="" class="img-kategori">
+                    <div class="deskripsi-kategori">
+                        <p>Rumah Tipe A</p>
+                    </div>
+                </div>
+
+                <div class="card-kategori">
+                    <img src="asset/sourceGambar/home.jpg" alt="" class="img-kategori">
+                    <div class="deskripsi-kategori">
+                        <p>Rumah Tipe B</p>
+                    </div>
+                </div>
+
+                <div class="card-kategori">
+                    <img src="asset/sourceGambar/home.jpg" alt="" class="img-kategori">
+                    <div class="deskripsi-kategori">
+                        <p>Rumah Tipe C</p>
+                    </div>
+                </div>
+
+                <div class="card-kategori">
+                    <img src="asset/sourceGambar/home.jpg" alt="" class="img-kategori">
+                    <div class="deskripsi-kategori">
+                        <p>Rumah Tipe D</p>
+                    </div>
+                </div>
+
+                <div class="card-kategori">
+                    <img src="asset/sourceGambar/home.jpg" alt="" class="img-kategori">
+                    <div class="deskripsi-kategori">
+                        <p>Rumah Tipe E</p>
+                    </div>
+                </div>
+
+                <div class="card-kategori">
+                    <img src="asset/sourceGambar/home.jpg" alt="" class="img-kategori">
+                    <div class="deskripsi-kategori">
+                        <p>Rumah Tipe F</p>
+                    </div>
+                </div>
+
+                <div class="card-kategori">
+                    <img src="asset/sourceGambar/home.jpg" alt="" class="img-kategori">
+                    <div class="deskripsi-kategori">
+                        <p>Rumah Tipe G</p>
+                    </div>
+                </div>
+
+                <div class="card-kategori">
+                    <img src="asset/sourceGambar/home.jpg" alt="" class="img-kategori">
+                    <div class="deskripsi-kategori">
+                        <p>Rumah Tipe H</p>
+                    </div>
+                </div>
+
+                <div class="fas fa-chevron-left chevron" id="chevron-left" onclick="Left()"></div>
+                <div class="fas fa-chevron-right chevron" id="chevron-right" onclick="Right()"></div>
+            </div>
+        </div>
+
+
+        <div class="container-form-kategori">
+            <p class="title-form">Cari Rumah impian Anda sekarang</p>
+            <div class="tabs">
+                <button class="tablinks tab1" id="defaultopen" onclick="openTablinks(event, 'Aset')">Aset</button>
+                <button class="tablinks tab2" onclick="openTablinks(event, 'Nominal')">Nominal</button>
+                <button class="tablinks tab3" onclick="openTablinks(event, 'Lokasi')">Lokasi</button>
+                <button class="tablinks tab4" onclick="openTablinks(event, 'Konfirmasi')">Konfirmasi</button>
+                <div class="line"></div>
+            </div>
+
+            <!-- TABCONTENT START -->
+            <div class="tabcontent" id="Aset">
+                <div class="wraper-input-tabcontent">
+                    <h5 class="title">Aset yang ingin di beli</h5>
+                    <input type="text" placeholder="Rumah kayu, rumah beton dan lain-lain">
+                </div>
+
+                <label for="tipeRumah">Tipe</label>
+                <select id="tipeRumah" name="tipeRumah">
+                    <option value="Tipe A">Tipe A</option>
+                    <option value="Tipe B">Tipe B</option>
+                    <option value="Tipe C">Tipe C</option>
+                    <option value="Tipe D">Tipe D</option>
+                    <option value="Tipe E">Tipe E</option>
+                    <option value="Tipe F">Tipe F</option>
+                    <option value="Tipe G">Tipe G</option>
+                </select>
+            </div>
+
+            <div class="tabcontent" id="Nominal">
+                <div class="wraper-input-tabcontent">
+                    <h5 class="title">Nominal harga rumah</h5>
+                    <input type="text" placeholder="Rumah kayu, rumah beton dan lain-lain">
+                </div>
+
+                <label for="tipeRumah">Tipe</label>
+                <select id="tipeRumah" name="tipeRumah">
+                    <option value="Tipe A">Tipe A</option>
+                    <option value="Tipe B">Tipe B</option>
+                    <option value="Tipe C">Tipe C</option>
+                    <option value="Tipe D">Tipe D</option>
+                    <option value="Tipe E">Tipe E</option>
+                    <option value="Tipe F">Tipe F</option>
+                    <option value="Tipe G">Tipe G</option>
+                </select>
+            </div>
+
+            <div class="tabcontent" id="Lokasi">
+                <div class="wraper-input-tabcontent">
+                    <h5 class="title">lokasi impian anda</h5>
+                    <input type="text" placeholder="Rumah kayu, rumah beton dan lain-lain">
+                </div>
+
+                <label for="tipeRumah">Tipe</label>
+                <select id="tipeRumah" name="tipeRumah">
+                    <option value="Tipe A">Tipe A</option>
+                    <option value="Tipe B">Tipe B</option>
+                    <option value="Tipe C">Tipe C</option>
+                    <option value="Tipe D">Tipe D</option>
+                    <option value="Tipe E">Tipe E</option>
+                    <option value="Tipe F">Tipe F</option>
+                    <option value="Tipe G">Tipe G</option>
+                </select>
+            </div>
+
+            <div class="tabcontent" id="Konfirmasi">
+                <div class="wraper-input-tabcontent">
+                    <h5 class="title">konfirmasi</h5>
+                    <input type="text" placeholder="Rumah kayu, rumah beton dan lain-lain">
+                </div>
+
+                <label for="tipeRumah">Tipe</label>
+                <select id="tipeRumah" name="tipeRumah">
+                    <option value="Tipe A">Tipe A</option>
+                    <option value="Tipe B">Tipe B</option>
+                    <option value="Tipe C">Tipe C</option>
+                    <option value="Tipe D">Tipe D</option>
+                    <option value="Tipe E">Tipe E</option>
+                    <option value="Tipe F">Tipe F</option>
+                    <option value="Tipe G">Tipe G</option>
+                </select>
+            </div>
+            <!-- TABCONTENT END -->
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- link file js -->
+    <script src="script.js"></script>
+</body>
+
+</html>

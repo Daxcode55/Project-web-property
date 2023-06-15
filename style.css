@@ -1,0 +1,670 @@
+@import url('https://fonts.googleapis.com/css2?family=Righteous&family=Roboto&display=swap');
+
+
+:root {
+    --main-color: #20252d;
+    --card-color: #dbdbdb;
+    --color-bg: #8f8989;
+    --light-white: rgba(255, 255, 255, .5);
+    --light-black: rgba(0, 0, 0, .3);
+    --white: #fff;
+    --black: #000;
+}
+
+
+*,
+html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Righteous', cursive;
+    font-family: 'Roboto', sans-serif;
+}
+
+header {
+    background-image: url('asset/bg-header.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+}
+
+.flex {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    backdrop-filter: blur(8px);
+    background: var(--light-black);
+    height: 40px;
+    max-width: 100%;
+}
+
+.flex .logo {
+    color: var(--color-bg);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.flex .logo span {
+    color: var(--white);
+}
+
+.flex .navbar .link {
+    color: var(--white);
+    text-decoration: none;
+    margin: 0 17px;
+}
+
+.flex .navbar .link:hover {
+    color: var(--card-color);
+    transition-duration: .4s;
+}
+
+#menu-btn {
+    display: none;
+}
+
+
+
+/* Jumbotron header */
+.header-jumbotron {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+    height: 94vh;
+}
+
+.intro {
+    max-width: 60%;
+    font-size: 70px;
+    font-weight: 900;
+    text-align: center;
+    color: var(--white);
+}
+
+.intro span {
+    color: var(--main-color);
+    font-size: 75px;
+    text-decoration: underline;
+}
+
+.wraper-item-search {
+    position: relative;
+}
+
+.input-search {
+    width: 600px;
+    padding: 14px 12px;
+    margin: 20px 0;
+    border-radius: 20px;
+    border: none;
+    color: var(--white);
+    font-size: 15px;
+    background: var(--light-black);
+    backdrop-filter: blur(2px);
+    outline: none;
+}
+
+.input-search:focus {
+    border: 1px solid var(--black);
+    margin-top: 19px;
+    margin-bottom: 19px;
+}
+
+#search-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 30px;
+    bottom: 30px;
+    right: 20px;
+    font-size: 25px;
+    color: var(--light-white);
+}
+
+#search-btn:hover {
+    color: var(--white);
+    transition-duration: .3s;
+}
+
+.wraper-btn .btn-masuk {
+    cursor: pointer;
+    padding: 12px;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 9px;
+    border: 1px solid var(--white);
+    background-color: var(--light-black);
+    backdrop-filter: blur(2px);
+    color: var(--white);
+}
+
+.wraper-btn .btn-masuk:hover {
+    backdrop-filter: blur(1px);
+    padding: 13px;
+    margin: -2px;
+    margin-right: 10px;
+    transition-duration: .3s;
+}
+
+.wraper-btn .btn-daftar {
+    cursor: pointer;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 9px;
+    border: 1px solid var(--black);
+    background-color: var(--light-white);
+    backdrop-filter: blur(2px);
+    color: var(--black);
+}
+
+.wraper-btn .btn-daftar:hover {
+    backdrop-filter: blur(1px);
+    padding: 13px;
+    margin: -1px;
+    margin-right: -1px;
+    transition-duration: .4s;
+}
+
+
+/* FLEX CONTENT ITEM */
+
+.container-flex-content {
+    border: 1px solid red;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.container-flex-kategori {
+    width: 44%;
+    margin: 20px 0px 20px 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    box-shadow: 0 1px 6px 0 rgba(49, 53, 59, 0.12);
+    border-radius: 12px;
+}
+
+.container-flex-kategori .title-kategori {
+    padding: 10px;
+    font-size: 27px;
+    font-weight: bolder;
+}
+
+.container-flex-kategori .wraper-card-kategori {
+    display: flex;
+    overflow-x: scroll;
+    scroll-behavior: smooth;
+    transition: all 3s;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.wraper-card-kategori .card-kategori {
+    cursor: pointer;
+    margin: 10px;
+    text-align: center;
+}
+
+.wraper-card-kategori .img-kategori {
+    width: 130px;
+    height: 130px;
+    border-radius: 12px;
+}
+
+.wraper-card-kategori .card-kategori .deskripsi-kategori {
+    font-size: 15px;
+    font-weight: bolder;
+    color: var(--black);
+    margin: 10px 0;
+}
+
+.wraper-card-kategori:hover .chevron {
+    transform: scale(1);
+    right: -7px;
+}
+
+.wraper-card-kategori:hover .fa-chevron-left {
+    left: -7px;
+}
+
+.fa-chevron-left {
+    cursor: pointer;
+    text-align: center;
+    padding-top: 8px;
+    background-color: var(--card-color);
+    color: var(--color-bg);
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: 32px;
+    height: 32px;
+    margin-top: -10px;
+    border-radius: 100%;
+    transform: scale(0);
+    transition: all 0.25s ease 0s;
+}
+
+.fa-chevron-right {
+    cursor: pointer;
+    text-align: center;
+    padding-top: 8px;
+    background-color: var(--card-color);
+    color: var(--color-bg);
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    margin-top: -10px;
+    border-radius: 100%;
+    transform: scale(0);
+    transition: all 0.25s ease 0s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container-form-kategori {
+    border: 1px solid var(--card-color);
+    width: 45%;
+    margin: 20px 30px 20px 0;
+}
+
+.container-form-kategori .title-form {
+    padding: 10px;
+    font-size: 27px;
+    font-weight: bolder;
+}
+
+.container-form-kategori .tabs {
+    border: 1px solid var(--color-bg);
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+    display: flex;
+    max-width: 100%;
+    position: relative;
+}
+
+.container-form-kategori .tabs button {
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: inherit;
+    font-size: 15px;
+    font-weight: 900;
+    color: #20252d;
+}
+
+.container-form-kategori .tabcontent {
+    display: none;
+}
+
+.tabs .tab1.active ~ .line {
+    margin-left: 0;
+}
+
+.tabs .tab2.active ~ .line {
+    margin-left: 153px;
+}
+
+.tabs .tab3.active ~ .line{
+    margin-left: 305px;
+
+}
+
+.tabs .tab4.active ~ .line{
+    margin-left: 457px;
+}
+
+
+.line {
+    width: 153px;
+    height: 2px;
+    background-color: var(--main-color);
+    position: absolute;
+    bottom: 0%;
+    transition: all 0.3s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* for desktops */
+@media only screen and (min-width: 1367px) {
+
+    .flex {
+        justify-content: space-between;
+        height: 50px;
+    }
+
+    .flex .logo {
+        font-size: 25px;
+        margin-left: 45px;
+    }
+
+    .flex .navbar {
+        margin-right: 20px;
+    }
+
+    .flex .navbar .link {
+        font-size: 20px;
+        margin: 0 25px;
+    }
+
+    /* jumbotron header */
+    .intro {
+        max-width: 90%;
+    }
+
+    .input-search {
+        width: 700px;
+        padding: 17px 14px;
+        margin: 30px 0;
+        border-radius: 24px;
+        font-size: 20px;
+    }
+
+    .input-search:focus {
+        border: 1px solid var(--black);
+        margin-top: 29px;
+        margin-bottom: 29px;
+    }
+
+    #search-btn {
+        top: 45px;
+        bottom: 45px;
+    }
+
+    .wraper-btn .btn-masuk {
+        border-radius: 14px;
+        padding: 17px 22px;
+        margin-right: 20px;
+        font-size: 20px;
+    }
+
+    .wraper-btn .btn-masuk:hover {
+        padding: 18px 23px;
+        margin: -2px;
+        margin-right: 20px;
+    }
+
+    .wraper-btn .btn-daftar {
+        border-radius: 14px;
+        padding: 17px 22px;
+        font-size: 20px;
+    }
+
+    .wraper-btn .btn-daftar:hover {
+        padding: 18px 23px;
+        margin: -1px;
+    }
+
+
+}
+
+/* for laptops */
+@media only screen and (min-width: 991px) and (max-width: 1366px) {}
+
+
+/* for large tablets */
+@media only screen and (min-width: 769px) and (max-width: 990px) {
+
+    .flex {
+        justify-content: space-between;
+        height: 50px;
+    }
+
+    .flex .logo {
+        font-size: 20px;
+        margin-left: 30px;
+    }
+
+    .flex .navbar {
+        margin-right: 30px;
+    }
+
+    .flex .navbar .link {
+        font-size: 18px;
+    }
+
+    /* jumbotron header */
+    .intro {
+        max-width: 90%;
+    }
+
+    .input-search {
+        font-size: 17px;
+    }
+
+    .input-search:focus {
+        backdrop-filter: blur(0);
+        font-weight: 400;
+    }
+
+    .wraper-btn .btn-daftar:hover {
+        margin: -1px;
+    }
+
+}
+
+
+
+/* for smaller phone/tablets */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .flex {
+        position: relative;
+        justify-content: space-between;
+    }
+
+    .flex .logo {
+        margin-left: 20px;
+        font-size: 20px;
+    }
+
+    .flex .navbar {
+        position: absolute;
+        top: 105%;
+        right: 20px;
+        left: 20px;
+        background-color: var(--light-black);
+        backdrop-filter: blur(8px);
+        border-radius: 7px;
+        transform: scale(0);
+        transform-origin: top right;
+        transition: .2s linear;
+    }
+
+    .flex .navbar.active {
+        transform: scale(1);
+    }
+
+    .flex .navbar .link {
+        display: block;
+        font-size: 20px;
+        padding: 10px 14px;
+        margin: 7px 14px;
+        color: var(--white);
+        border-radius: 10px;
+    }
+
+    .flex .navbar .link:hover {
+        background-color: var(--light-black);
+        transition-duration: .0s;
+    }
+
+    #menu-btn {
+        display: block;
+        margin-right: 20px;
+        font-size: 20px;
+        color: var(--black);
+    }
+
+    /* Jumbotron header */
+    .intro {
+        max-width: 100%;
+        font-size: 35px;
+    }
+
+    .intro span {
+        font-size: 37px;
+    }
+
+    .input-search {
+        max-width: 460px;
+        font-size: 17px;
+    }
+
+    .input-search:focus {
+        backdrop-filter: blur(0);
+        font-weight: 400;
+    }
+
+    /* FLEX CONTENT ITEM */
+    .container-flex-content {
+        flex-direction: column;
+    }
+
+    .container-flex-kategori {
+        width: 86%;
+        margin: 30px auto;
+    }
+
+
+}
+
+
+/* for phones */
+@media only screen and (max-width: 480px) {
+    .flex {
+        position: relative;
+        justify-content: space-between;
+    }
+
+    .flex .logo {
+        margin-left: 20px;
+        font-size: 20px;
+    }
+
+    .flex .navbar {
+        position: absolute;
+        top: 105%;
+        right: 20px;
+        left: 20px;
+        background-color: var(--light-black);
+        backdrop-filter: blur(8px);
+        border-radius: 7px;
+        transform: scale(0);
+        transform-origin: top right;
+        transition: .2s linear;
+    }
+
+    .flex .navbar.active {
+        transform: scale(1);
+    }
+
+    .flex .navbar .link {
+        display: block;
+        padding: 10px 14px;
+        margin: 7px 14px;
+        color: var(--white);
+        border-radius: 10px;
+    }
+
+    .flex .navbar .link:hover {
+        background-color: var(--light-black);
+        transition-duration: .0s;
+    }
+
+    #menu-btn {
+        display: block;
+        margin-right: 20px;
+        font-size: 20px;
+        color: var(--black);
+    }
+
+    /* Jumbotron header */
+    .intro {
+        max-width: 100%;
+        font-size: 31px;
+    }
+
+    .intro span {
+        font-size: 33px;
+    }
+
+    .input-search {
+        max-width: 350px;
+        font-size: 17px;
+    }
+
+    .input-search:focus {
+        backdrop-filter: blur(0);
+        font-weight: 400;
+    }
+
+    .wraper-btn .btn-daftar:hover {
+        margin: -1px;
+    }
+
+    /* FLEX CONTENT ITEM */
+    .container-flex-content {
+        flex-direction: column;
+    }
+
+    .container-flex-kategori {
+        width: 86%;
+        margin: 30px auto;
+    }
+}
