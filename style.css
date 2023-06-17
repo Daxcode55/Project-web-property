@@ -180,6 +180,9 @@ header {
     border-radius: 12px;
     justify-content: space-between;
     background-color: var(--card-color);
+    box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.56);
+    -webkit-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.56);
+    -moz-box-shadow: 0px 0px 8px 1px rgba(0, 0, 0, 0.56);
 }
 
 
@@ -305,6 +308,7 @@ header {
 }
 
 .wraper-form-kategori {
+    background-color: #eaeaea;
     border: 1px solid var(--light-black);
     border-radius: 12px;
     height: 180px;
@@ -343,31 +347,83 @@ header {
     color: var(--main-color);
 }
 
-.tabs .tab1.active ~ .line {
+.tabs .tab1.active~.line {
     margin-left: 0;
 }
 
-.tabs .tab2.active ~ .line {
-    margin-left: 160px;
+.tabs .tab2.active~.line {
+    margin-left: 144px;
 }
 
-.tabs .tab3.active ~ .line{
-    margin-left: 320px;
+.tabs .tab3.active~.line {
+    margin-left: 289px;
 }
 
-.tabs .tab4.active ~ .line{
-    margin-left: 480px;
+.tabs .tab4.active~.line {
+    margin-left: 433px;
 }
 
 
 .line {
-    width: 160px;
+    width: 144px;
     height: 2px;
     background-color: var(--main-color);
     position: absolute;
     bottom: 0%;
     transition: all 0.3s ease-in-out;
 }
+
+/* TABCONTENT START */
+.container-content-input {
+    display: flex;
+    margin: 20px 20px;
+}
+
+.wraper-input-tabcontent .title {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.wraper-input-tabcontent input {
+    width: 250px;
+    padding: 10px;
+    border-radius: 15px;
+    border: 1px solid var(--light-black);
+}
+
+.wraper-input-tabcontent input:active {
+    outline: var(--main-color);
+}
+
+.wraper-label {
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.wraper-label label {
+    font-size: 14px;
+    font-weight: 300;
+    margin-bottom: 10px;
+}
+
+.wraper-label select {
+    width: 250px;
+    padding: 10px;
+    border-radius: 15px;
+    outline: none;
+    border: 1px solid var(--light-black);
+}
+
+.wraper-label .option {
+    width: 250px;
+    padding: 10px;
+    border-radius: 15px;
+    outline: none;
+    border: 1px solid var(--light-black);
+}
+
 
 
 
